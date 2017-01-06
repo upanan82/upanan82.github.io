@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+		<title>Pomodoro Clock</title>
+		<link rel="stylesheet" href="index.css">
+		<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+		<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+		<script src="index.js"></script>
+	</head>
+	<body>
+  		<div class="content">
+	  		<div class="parent">
+		  		<div class="block">
+        			<h2 id="h"></h2>
+        			<div class="timer">
+          				<div id='hour'>
+            				<p id='h0'></p>
+            				<p id='h1'></p>
+          				</div>
+          				<div class="tit">:</div>
+          				<div id='min'>
+            				<p id='m0'></p>
+            				<p id='m1'></p>
+          				</div>
+          				<div class="tit">:</div>
+						<div id='sec'>
+							<p id='s0'></p>
+            				<p id='s1'></p>
+          				</div>
+        			</div>
+        			<div class="control">
+          				<p class="title">Session length</p>
+          				<div class="min" onclick="timing(0, 'num');" onselectstart="return false" onmousedown="return false">-</div>
+          				<div class="num" id="num" onselectstart="return false" onmousedown="return false"></div>
+          				<div class="max" onclick="timing(1, 'num')" onselectstart="return false" onmousedown="return false">+</div>
+        			</div>
+        			<div class="control1">
+          				<p class="title">Break length</p>
+          				<div class="min" onclick="timing(0, 'num1');" onselectstart="return false" onmousedown="return false">-</div>
+          				<div class="num" id="num1" onselectstart="return false" onmousedown="return false"></div>
+          				<div class="max" onclick="timing(1, 'num1');" onselectstart="return false" onmousedown="return false">+</div>
+        			</div>
+        			<br><br><br><br><br><br><br><br><br>
+        			<input type="button" onclick="start();" value="Go" id="go">
+        			<input type="button" onclick="clearAll();" value="Clear" id="clear">
+        			<input type="button" onclick="index = 1;" value="Stop" id="stop" disabled>
+      			</div>
+      			<div class="footer">by <a target='_blank' href='https://github.com/upanan82'>upanan82</a></div>
+    		</div>
+  		</div>
+	</body>
+</html>
